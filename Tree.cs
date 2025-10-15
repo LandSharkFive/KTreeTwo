@@ -3,7 +3,7 @@ namespace KTreeTwo
 {
     public class Tree
     {
-        private const int MaxNode = 20;
+        private const int MaxChild = 20;
 
         public Node Root;
 
@@ -119,7 +119,7 @@ namespace KTreeTwo
 
             List<int> list = Root.GetData();
             list.Sort();
-            Root = Build(list, 0, list.Count - 1, MaxNode);
+            Root = Build(list, 0, list.Count - 1, MaxChild);
         }
 
         /// <summary>

@@ -2,7 +2,7 @@
 {
     public class Node
     {
-        private const int MaxNode = 20;
+        private const int MaxChild = 20;
 
         public int Key;
         public Node Left, Right; 
@@ -41,7 +41,7 @@
         /// <returns>bool</returns>
         private bool IsOverflow()
         {
-            return IsLeaf() && Data.Count > MaxNode;
+            return IsLeaf() && Data.Count > MaxChild;
         }
 
         /// <summary>
