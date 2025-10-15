@@ -1,8 +1,6 @@
 # K-Tree
 
-A K-Tree is a binary tree where each leaf contains an list of integers. All data is saved in the leaves.  All operations are done in logarithmic time.  
-Building a K-Tree takes linear time.  The best size for the list is between 50 and 100 elements.  A K-Tree can used with external storage.  A K-Tree can be used as a dictionary.
-A K-Tree is a sorted list.
+A K-Tree is a binary tree where each leaf contains an list of integers. All data is saved in the leaves. All operations are done in logarithmic time. Building a K-Tree takes linear time. The best size for the list is between 50 and 100 elements. A K-Tree can used with external storage. A K-Tree can be used as a dictionary. A K-Tree is a sorted list.
 
 ## Install and Build
 
