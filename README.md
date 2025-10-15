@@ -8,7 +8,7 @@ The is a C# Console-Mode Project.  Use Visual Studio 2022 and above to compile.
 
 ## Performance
 
-Performance depends on the number of rows in the Flat Files.  
+Performance is good. Performance depends on the number of items.
 
 | Items | Time | Memory |
 | --- | --- | --- |
