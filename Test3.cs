@@ -15,23 +15,15 @@ namespace UnitTest
 
             Tree t = new Tree();
 
-            // timing
-            var timer = new Stopwatch();
-            timer.Start();
-
             foreach (int x in a)
             {
                 t.Add(x);
             }
 
-            timer.Stop();
-
             foreach (int x in a)
             {
                 t.Remove(x);
             }
-
-            timer.Stop();
 
             int data = t.GetData().Count;
             Assert.IsTrue(data == 0);
