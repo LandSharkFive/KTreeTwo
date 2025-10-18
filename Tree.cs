@@ -1,4 +1,6 @@
 ﻿
+using System.Reflection.PortableExecutable;
+
 namespace KTreeTwo
 {
     public class Tree
@@ -147,6 +149,41 @@ namespace KTreeTwo
             a.Left = Build(list, start, mid, size);
             a.Right = Build(list, mid + 1, end, size);
             return a;
+        }
+
+        /// <summary>
+        /// Write to file.
+        /// </summary>
+        /// <param name="fileName">string</param>
+        public void WriteToFile(string fileName)
+        {
+            using (StreamWriter sw = new StreamWriter(fileName, false))
+            {
+                Root.WriteToStream(sw);
+            }
+        }
+
+        /// <summary>
+        /// Read file
+        /// </summary>
+        /// <param name="fileName">string</param>
+        public void ReadFile(string fileName)
+        {
+            List<int> list = new List<int>();
+            using (StreamReader sr = new StreamReader(fileName))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    int a = 0;
+                    if (int.TryParse(line, out a))
+                    {
+                        list.Add(a);
+                    }
+                }
+            }
+
+            Root = Build(list, 0, list.Count - 1, MaxChild);
         }
 
 

@@ -247,6 +247,30 @@
             }
         }
 
+        /// <summary>
+        /// Write Data to Stream.
+        /// </summary>
+        /// <param name="sw">StreamWriter</param>
+        public void WriteToStream(StreamWriter sw)
+        {
+            if (Left != null)
+            {
+                Left.WriteToStream(sw);
+            }
+            if (IsLeaf() && !IsEmpty())
+            {
+                foreach (int x in Data)
+                {
+                    sw.WriteLine(x);
+                }
+            }
+            if (Right != null)
+            {
+                Right.WriteToStream(sw);
+            }
+
+        }
+
 
     }
 }

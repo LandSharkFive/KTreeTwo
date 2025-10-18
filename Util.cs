@@ -20,9 +20,20 @@ namespace KTreeTwo
         public static int GetMemory()
         {
             Process currentProcess = Process.GetCurrentProcess();
-            long workingSet = currentProcess.PeakWorkingSet64;
-            double peakWorkingSet = workingSet / (1024.0 * 1024.0);
-            return Convert.ToInt32(peakWorkingSet);
+            long workingSet = currentProcess.PeakWorkingSet64 / (1024 * 1024);
+            return Convert.ToInt32(workingSet);
+        }
+
+        public static bool IsSorted(List<int> list)
+        {
+            for (int i = 1; i < list.Count; i++)
+            {
+                if (list[i-1] > list[i])
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
     }
